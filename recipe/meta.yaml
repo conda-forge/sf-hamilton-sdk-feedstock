@@ -1,5 +1,5 @@
 {% set name = "sf-hamilton-sdk" %}
-{% set version = "0.7.3" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sf_hamilton_sdk-{{ version }}.tar.gz
-  sha256: f841235b523188cc7e1d9df0d3dba77d29b3fd2a0d6e4b190f9e63e6790a4c78
+  sha256: 72834bced37b77d57106f1f4f938293b5170387136ce99c9ed66988709eec06a
 
 build:
   entry_points:
