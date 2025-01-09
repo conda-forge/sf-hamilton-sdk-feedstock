@@ -14,16 +14,16 @@ build:
     - hamilton-sdk = hamilton_sdk.cli.cli:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7,<4.0
+    - python {{ python_min }}
     - setuptools >=61.0.0
     - wheel
     - pip
   run:
-    - python >=3.7,<4.0
+    - python >={{ python_min }},<4.0
     - aiohttp
     - click
     - gitpython
@@ -42,6 +42,7 @@ test:
     - hamilton-sdk --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/DAGWorks-Inc/hamilton
