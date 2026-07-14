@@ -1,5 +1,5 @@
 {% set name = "sf-hamilton-sdk" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sf_hamilton_sdk-{{ version }}.tar.gz
-  sha256: 72834bced37b77d57106f1f4f938293b5170387136ce99c9ed66988709eec06a
+  sha256: 259d712f7c31c08bd58e71daf8ec42ff72afc9efa82fdc89d06cd15bda7ac93d
 
 build:
   entry_points:
     - hamilton-sdk = hamilton_sdk.cli.cli:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
